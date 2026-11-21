@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neostrada-certbot-plugin"
+version = "0.1.0"
+description = "Neostrada DNS authenticator plugin for Certbot"
+authors = [
+    { name = "troplolBE", email = 'troplolbe@proton.me' }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "certbot>=2.0.0",
+    "requests",
+    "tldextract"
+]
+
+[project.urls]
+homepage = "https://github.com/troplolBE/certbot-dns-neostrada"
+
+[project.entry-points."certbot.plugins"]
+dns-neostrada = "certbot_dns_neostrada.dns_neostrada:Authenticator"
