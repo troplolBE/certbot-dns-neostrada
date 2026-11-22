@@ -22,3 +22,8 @@ homepage = "https://github.com/troplolBE/certbot-dns-neostrada"
 
 [project.entry-points."certbot.plugins"]
 dns-neostrada = "certbot_dns_neostrada.dns_neostrada:Authenticator"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["certbot_dns_neostrada"]
+exclude = ["tmp*"]
